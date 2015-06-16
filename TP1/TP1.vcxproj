@@ -10,6 +10,32 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Bomb.h" />
+    <ClInclude Include="Bumper.h" />
+    <ClInclude Include="Canon.h" />
+    <ClInclude Include="Collidables.h" />
+    <ClInclude Include="Navi.h" />
+    <ClInclude Include="Peggle.h" />
+    <ClInclude Include="Resources.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Bomb.cpp" />
+    <ClCompile Include="Bumper.cpp" />
+    <ClCompile Include="Canon.cpp" />
+    <ClCompile Include="Collidables.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Navi.cpp" />
+    <ClCompile Include="Peggle.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Engine\src\App\App.vcxproj">
+      <Project>{c5b44902-a125-46ca-b7f1-cd8d6a17394c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Engine\src\Core\Core.vcxproj">
+      <Project>{cacb57eb-0de4-4e3f-b855-1cebd28a0c4f}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{8113505F-AA6B-4BF8-B398-938F8532CEE1}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -41,7 +67,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>../D3DApp;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
+    <IncludePath>../../Engine/src/App;../../Engine/src/Core;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -78,20 +104,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\D3DApp\D3DApp.vcxproj">
-      <Project>{9c37e120-751c-4d83-917b-8b35076792a7}</Project>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Canon.h" />
-    <ClInclude Include="TP1App.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Canon.cpp" />
-    <ClCompile Include="Source.cpp" />
-    <ClCompile Include="TP1App.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
