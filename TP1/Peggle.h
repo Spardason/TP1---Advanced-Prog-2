@@ -1,5 +1,4 @@
 #pragma once
-#include "Common.h"
 #include "Engine.h"
 #include "Component.h"
 #include "Sprite.h"
@@ -15,5 +14,8 @@ public:
 	void Update();
 	void Draw();
 	void Stop();
+
+private:
+	Sprite* s;
 };
 

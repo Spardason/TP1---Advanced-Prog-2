@@ -1,34 +1,96 @@
-﻿La génération a démarré 2015-06-16 19:10:05.
+﻿La génération a démarré 2015-06-17 16:25:13.
      1>Projet "F:\S3\ProgAvancée2\TP1\TP1\TP1.vcxproj" sur le nœud 2 (Build cible(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Main.cpp Peggle.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Bomb.cpp Bumper.cpp Canon.cpp Collidables.cpp Main.cpp Navi.cpp Peggle.cpp
          Peggle.cpp
          c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>f:\s3\progavancée2\engine\src\core\textureinfo.h(4): error C2011: 'TextureInfo' : redéfinition du type 'struct'
+                 f:\s3\progavancée2\engine\src\core\textureinfo.h(4) : voir la déclaration de 'TextureInfo'
+     1>f:\s3\progavancée2\engine\src\core\engine.h(78): error C2923: 'ResourceHolder' : 'pTexInfo' n'est pas un argument de type modèle valide pour le paramètre 'Resource'
+                 f:\s3\progavancée2\engine\src\core\textureinfo.h(7) : voir la déclaration de 'pTexInfo'
+     1>f:\s3\progavancée2\engine\src\core\engine.h(98): error C2923: 'ResourceHolder' : 'pTexInfo' n'est pas un argument de type modèle valide pour le paramètre 'Resource'
+                 f:\s3\progavancée2\engine\src\core\textureinfo.h(7) : voir la déclaration de 'pTexInfo'
      1>f:\s3\progavancée2\engine\src\core\sprite.h(45): warning C4244: 'argument' : conversion de 'LONG' en 'FLOAT', perte possible de données
      1>f:\s3\progavancée2\engine\src\core\sprite.h(46): warning C4244: 'argument' : conversion de 'LONG' en 'FLOAT', perte possible de données
-     1>f:\s3\progavancée2\tp1\tp1\peggle.cpp(5): warning C4129: 'C' : caractère de séquence d'échappement non reconnu
-     1>f:\s3\progavancée2\tp1\tp1\peggle.cpp(7): warning C4129: 'C' : caractère de séquence d'échappement non reconnu
-     1>f:\s3\progavancée2\tp1\tp1\peggle.cpp(8): warning C4129: 'C' : caractère de séquence d'échappement non reconnu
-     1>f:\s3\progavancée2\tp1\tp1\peggle.cpp(9): warning C4129: 'N' : caractère de séquence d'échappement non reconnu
-     1>f:\s3\progavancée2\engine\src\core\resourceholder.inl(13): error C2664: 'HRESULT D3DXCreateTextureFromFileW(LPDIRECT3DDEVICE9,LPCWSTR,LPDIRECT3DTEXTURE9 *)' : impossible de convertir l'argument 2 de 'const char *' en 'LPCWSTR'
-                 Les types pointés n'ont aucun rapport entre eux ; conversion nécessitant reinterpret_cast, cast de style C ou cast de style fonction
-                 f:\s3\progavancée2\engine\src\core\resourceholder.inl(11) : lors de la compilation de la fonction membre 'void ResourceHolder<IDirect3DTexture9,int>::LoadTexture(Identifier,const std::string &)' de la classe modèle
-                 with
-                 [
-                     Identifier=int
-                 ]
-                 f:\s3\progavancée2\tp1\tp1\peggle.cpp(5) : voir la référence à l'instanciation de la fonction modèle 'void ResourceHolder<IDirect3DTexture9,int>::LoadTexture(Identifier,const std::string &)' en cours de compilation
-                 with
-                 [
-                     Identifier=int
-                 ]
-                 f:\s3\progavancée2\tp1\tp1\peggle.cpp(5) : voir la référence à l'instanciation de la classe modèle 'ResourceHolder<IDirect3DTexture9,int>' en cours de compilation
-     1>f:\s3\progavancée2\engine\src\core\resourceholder.inl(13): error C2664: 'HRESULT DXTraceW(const char *,DWORD,HRESULT,const WCHAR *,BOOL)' : impossible de convertir l'argument 4 de 'const char [66]' en 'const WCHAR *'
-                 Les types pointés n'ont aucun rapport entre eux ; conversion nécessitant reinterpret_cast, cast de style C ou cast de style fonction
-         Génération de code en cours...
-         Compilation en cours...
+     1>f:\s3\progavancée2\tp1\tp1\peggle.cpp(5): error C2662: 'void ResourceHolder<Resource,Identifier>::LoadTexture(Identifier,const std::string &)' : impossible de convertir un pointeur 'this' de 'ResourceHolder' en 'ResourceHolder<Resource,Identifier> &'
+                 Raison : impossible de convertir de 'ResourceHolder' en 'ResourceHolder<Resource,Identifier>'
+                 La conversion requiert un second constructeur ou opérateur de conversion défini par l'utilisateur
+     1>f:\s3\progavancée2\tp1\tp1\peggle.cpp(6): error C2662: 'void ResourceHolder<Resource,Identifier>::LoadTexture(Identifier,const std::string &)' : impossible de convertir un pointeur 'this' de 'ResourceHolder' en 'ResourceHolder<Resource,Identifier> &'
+                 Raison : impossible de convertir de 'ResourceHolder' en 'ResourceHolder<Resource,Identifier>'
+                 La conversion requiert un second constructeur ou opérateur de conversion défini par l'utilisateur
+     1>f:\s3\progavancée2\tp1\tp1\peggle.cpp(7): error C2662: 'void ResourceHolder<Resource,Identifier>::LoadTexture(Identifier,const std::string &)' : impossible de convertir un pointeur 'this' de 'ResourceHolder' en 'ResourceHolder<Resource,Identifier> &'
+                 Raison : impossible de convertir de 'ResourceHolder' en 'ResourceHolder<Resource,Identifier>'
+                 La conversion requiert un second constructeur ou opérateur de conversion défini par l'utilisateur
+     1>f:\s3\progavancée2\tp1\tp1\peggle.cpp(8): error C2662: 'void ResourceHolder<Resource,Identifier>::LoadTexture(Identifier,const std::string &)' : impossible de convertir un pointeur 'this' de 'ResourceHolder' en 'ResourceHolder<Resource,Identifier> &'
+                 Raison : impossible de convertir de 'ResourceHolder' en 'ResourceHolder<Resource,Identifier>'
+                 La conversion requiert un second constructeur ou opérateur de conversion défini par l'utilisateur
+     1>f:\s3\progavancée2\tp1\tp1\peggle.cpp(9): error C2662: 'void ResourceHolder<Resource,Identifier>::LoadTexture(Identifier,const std::string &)' : impossible de convertir un pointeur 'this' de 'ResourceHolder' en 'ResourceHolder<Resource,Identifier> &'
+                 Raison : impossible de convertir de 'ResourceHolder' en 'ResourceHolder<Resource,Identifier>'
+                 La conversion requiert un second constructeur ou opérateur de conversion défini par l'utilisateur
+     1>f:\s3\progavancée2\tp1\tp1\peggle.cpp(29): warning C4305: 'argument' : troncation de 'unsigned int' à 'unsigned char'
+     1>f:\s3\progavancée2\tp1\tp1\peggle.cpp(29): warning C4309: 'argument' : troncation de valeur de constante
+     1>f:\s3\progavancée2\tp1\tp1\peggle.cpp(31): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
+     1>f:\s3\progavancée2\tp1\tp1\peggle.cpp(34): warning C4305: 'argument' : troncation de 'unsigned int' à 'unsigned char'
+     1>f:\s3\progavancée2\tp1\tp1\peggle.cpp(34): warning C4309: 'argument' : troncation de valeur de constante
+     1>f:\s3\progavancée2\tp1\tp1\peggle.cpp(36): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
+         Navi.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>f:\s3\progavancée2\engine\src\core\textureinfo.h(4): error C2011: 'TextureInfo' : redéfinition du type 'struct'
+                 f:\s3\progavancée2\engine\src\core\textureinfo.h(4) : voir la déclaration de 'TextureInfo'
+     1>f:\s3\progavancée2\engine\src\core\engine.h(78): error C2923: 'ResourceHolder' : 'pTexInfo' n'est pas un argument de type modèle valide pour le paramètre 'Resource'
+                 f:\s3\progavancée2\engine\src\core\textureinfo.h(7) : voir la déclaration de 'pTexInfo'
+     1>f:\s3\progavancée2\engine\src\core\engine.h(98): error C2923: 'ResourceHolder' : 'pTexInfo' n'est pas un argument de type modèle valide pour le paramètre 'Resource'
+                 f:\s3\progavancée2\engine\src\core\textureinfo.h(7) : voir la déclaration de 'pTexInfo'
+     1>f:\s3\progavancée2\engine\src\core\sprite.h(45): warning C4244: 'argument' : conversion de 'LONG' en 'FLOAT', perte possible de données
+     1>f:\s3\progavancée2\engine\src\core\sprite.h(46): warning C4244: 'argument' : conversion de 'LONG' en 'FLOAT', perte possible de données
          Main.cpp
          c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>f:\s3\progavancée2\engine\src\core\textureinfo.h(4): error C2011: 'TextureInfo' : redéfinition du type 'struct'
+                 f:\s3\progavancée2\engine\src\core\textureinfo.h(4) : voir la déclaration de 'TextureInfo'
+     1>f:\s3\progavancée2\engine\src\core\engine.h(78): error C2923: 'ResourceHolder' : 'pTexInfo' n'est pas un argument de type modèle valide pour le paramètre 'Resource'
+                 f:\s3\progavancée2\engine\src\core\textureinfo.h(7) : voir la déclaration de 'pTexInfo'
+     1>f:\s3\progavancée2\engine\src\core\engine.h(98): error C2923: 'ResourceHolder' : 'pTexInfo' n'est pas un argument de type modèle valide pour le paramètre 'Resource'
+                 f:\s3\progavancée2\engine\src\core\textureinfo.h(7) : voir la déclaration de 'pTexInfo'
+     1>f:\s3\progavancée2\engine\src\core\sprite.h(45): warning C4244: 'argument' : conversion de 'LONG' en 'FLOAT', perte possible de données
+     1>f:\s3\progavancée2\engine\src\core\sprite.h(46): warning C4244: 'argument' : conversion de 'LONG' en 'FLOAT', perte possible de données
+         Collidables.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>f:\s3\progavancée2\engine\src\core\textureinfo.h(4): error C2011: 'TextureInfo' : redéfinition du type 'struct'
+                 f:\s3\progavancée2\engine\src\core\textureinfo.h(4) : voir la déclaration de 'TextureInfo'
+     1>f:\s3\progavancée2\engine\src\core\engine.h(78): error C2923: 'ResourceHolder' : 'pTexInfo' n'est pas un argument de type modèle valide pour le paramètre 'Resource'
+                 f:\s3\progavancée2\engine\src\core\textureinfo.h(7) : voir la déclaration de 'pTexInfo'
+     1>f:\s3\progavancée2\engine\src\core\engine.h(98): error C2923: 'ResourceHolder' : 'pTexInfo' n'est pas un argument de type modèle valide pour le paramètre 'Resource'
+                 f:\s3\progavancée2\engine\src\core\textureinfo.h(7) : voir la déclaration de 'pTexInfo'
+     1>f:\s3\progavancée2\engine\src\core\sprite.h(45): warning C4244: 'argument' : conversion de 'LONG' en 'FLOAT', perte possible de données
+     1>f:\s3\progavancée2\engine\src\core\sprite.h(46): warning C4244: 'argument' : conversion de 'LONG' en 'FLOAT', perte possible de données
+         Canon.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>f:\s3\progavancée2\engine\src\core\textureinfo.h(4): error C2011: 'TextureInfo' : redéfinition du type 'struct'
+                 f:\s3\progavancée2\engine\src\core\textureinfo.h(4) : voir la déclaration de 'TextureInfo'
+     1>f:\s3\progavancée2\engine\src\core\engine.h(78): error C2923: 'ResourceHolder' : 'pTexInfo' n'est pas un argument de type modèle valide pour le paramètre 'Resource'
+                 f:\s3\progavancée2\engine\src\core\textureinfo.h(7) : voir la déclaration de 'pTexInfo'
+     1>f:\s3\progavancée2\engine\src\core\engine.h(98): error C2923: 'ResourceHolder' : 'pTexInfo' n'est pas un argument de type modèle valide pour le paramètre 'Resource'
+                 f:\s3\progavancée2\engine\src\core\textureinfo.h(7) : voir la déclaration de 'pTexInfo'
+     1>f:\s3\progavancée2\engine\src\core\sprite.h(45): warning C4244: 'argument' : conversion de 'LONG' en 'FLOAT', perte possible de données
+     1>f:\s3\progavancée2\engine\src\core\sprite.h(46): warning C4244: 'argument' : conversion de 'LONG' en 'FLOAT', perte possible de données
+         Bumper.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>f:\s3\progavancée2\engine\src\core\textureinfo.h(4): error C2011: 'TextureInfo' : redéfinition du type 'struct'
+                 f:\s3\progavancée2\engine\src\core\textureinfo.h(4) : voir la déclaration de 'TextureInfo'
+     1>f:\s3\progavancée2\engine\src\core\engine.h(78): error C2923: 'ResourceHolder' : 'pTexInfo' n'est pas un argument de type modèle valide pour le paramètre 'Resource'
+                 f:\s3\progavancée2\engine\src\core\textureinfo.h(7) : voir la déclaration de 'pTexInfo'
+     1>f:\s3\progavancée2\engine\src\core\engine.h(98): error C2923: 'ResourceHolder' : 'pTexInfo' n'est pas un argument de type modèle valide pour le paramètre 'Resource'
+                 f:\s3\progavancée2\engine\src\core\textureinfo.h(7) : voir la déclaration de 'pTexInfo'
+     1>f:\s3\progavancée2\engine\src\core\sprite.h(45): warning C4244: 'argument' : conversion de 'LONG' en 'FLOAT', perte possible de données
+     1>f:\s3\progavancée2\engine\src\core\sprite.h(46): warning C4244: 'argument' : conversion de 'LONG' en 'FLOAT', perte possible de données
+         Bomb.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>f:\s3\progavancée2\engine\src\core\textureinfo.h(4): error C2011: 'TextureInfo' : redéfinition du type 'struct'
+                 f:\s3\progavancée2\engine\src\core\textureinfo.h(4) : voir la déclaration de 'TextureInfo'
+     1>f:\s3\progavancée2\engine\src\core\engine.h(78): error C2923: 'ResourceHolder' : 'pTexInfo' n'est pas un argument de type modèle valide pour le paramètre 'Resource'
+                 f:\s3\progavancée2\engine\src\core\textureinfo.h(7) : voir la déclaration de 'pTexInfo'
+     1>f:\s3\progavancée2\engine\src\core\engine.h(98): error C2923: 'ResourceHolder' : 'pTexInfo' n'est pas un argument de type modèle valide pour le paramètre 'Resource'
+                 f:\s3\progavancée2\engine\src\core\textureinfo.h(7) : voir la déclaration de 'pTexInfo'
      1>f:\s3\progavancée2\engine\src\core\sprite.h(45): warning C4244: 'argument' : conversion de 'LONG' en 'FLOAT', perte possible de données
      1>f:\s3\progavancée2\engine\src\core\sprite.h(46): warning C4244: 'argument' : conversion de 'LONG' en 'FLOAT', perte possible de données
          Génération de code en cours...
@@ -36,4 +98,4 @@
 
 ÉCHEC de la build.
 
-Temps écoulé 00:00:02.09
+Temps écoulé 00:00:05.84

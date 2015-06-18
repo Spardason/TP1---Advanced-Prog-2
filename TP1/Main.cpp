@@ -7,8 +7,9 @@ int WINAPI _tWinMain(HINSTANCE hInstance,
 	HINSTANCE prevHInstance, 
 	LPTSTR cmd, int showCmd)
 {
-	Engine* engine = new Engine(hInstance, "SpriteApp");
+	Engine* engine = new Engine(hInstance, "TP1-Peggle");
 	gEngine = engine;
+	engine->Init();
 
 	Peggle* game = new Peggle();
 
