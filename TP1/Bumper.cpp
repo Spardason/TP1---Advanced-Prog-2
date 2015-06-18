@@ -2,6 +2,7 @@
 
 
 Bumper::Bumper()
+	: Collidables(Texture::ID::Bumper)
 {
 }
 

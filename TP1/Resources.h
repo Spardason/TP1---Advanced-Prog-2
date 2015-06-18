@@ -11,7 +11,7 @@ namespace Texture
 		Navi,
 		Bomb,
 		Bumper,
-		ELEPHANT_DE_MER
+		Pot
 	};
 }
 

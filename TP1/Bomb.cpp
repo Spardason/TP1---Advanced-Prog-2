@@ -2,6 +2,7 @@
 
 
 Bomb::Bomb()
+	:Collidables(Texture::ID::Bomb)
 {
 }
 

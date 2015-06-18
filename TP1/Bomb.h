@@ -1,5 +1,6 @@
 #pragma once
 #include "Collidables.h"
+
 class Bomb :
 	public Collidables
 {

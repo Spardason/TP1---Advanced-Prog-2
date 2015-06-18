@@ -20,5 +20,7 @@ private:
 	Canon *canon;
 	Sprite *bg;
 	Navi *navi;
+	Bomb *bomb;
+	Bumper *bumper;
 };
 

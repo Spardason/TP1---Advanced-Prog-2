@@ -18,6 +18,7 @@
     <ClInclude Include="GameiInclude.h" />
     <ClInclude Include="Navi.h" />
     <ClInclude Include="Peggle.h" />
+    <ClInclude Include="Pot.h" />
     <ClInclude Include="Resources.h" />
   </ItemGroup>
   <ItemGroup>
@@ -28,6 +29,7 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Navi.cpp" />
     <ClCompile Include="Peggle.cpp" />
+    <ClCompile Include="Pot.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Engine\src\App\App.vcxproj">
