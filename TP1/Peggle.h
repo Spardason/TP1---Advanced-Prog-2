@@ -1,8 +1,7 @@
 #pragma once
-#include "Engine.h"
-#include "Component.h"
-#include "Sprite.h"
-#include "Resources.h"
+
+#include "GameiInclude.h"
+
 class Peggle :
 	public Component
 {
@@ -16,6 +15,10 @@ public:
 	void Stop();
 
 private:
-	Sprite* s;
+	void LoadTextures();
+
+	Canon *canon;
+	Sprite *bg;
+	Navi *navi;
 };
 

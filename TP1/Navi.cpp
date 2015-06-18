@@ -2,6 +2,7 @@
 
 
 Navi::Navi()
+	: Sprite(Texture::ID::Navi)
 {
 }
 

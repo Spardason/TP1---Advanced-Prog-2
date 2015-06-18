@@ -2,10 +2,13 @@
 
 
 Canon::Canon()
+	: Sprite(Texture::ID::Canon)
 {
+
 }
 
 
 Canon::~Canon()
 {
+
 }

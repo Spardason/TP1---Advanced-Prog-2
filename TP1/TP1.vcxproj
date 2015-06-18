@@ -15,6 +15,7 @@
     <ClInclude Include="Bumper.h" />
     <ClInclude Include="Canon.h" />
     <ClInclude Include="Collidables.h" />
+    <ClInclude Include="GameiInclude.h" />
     <ClInclude Include="Navi.h" />
     <ClInclude Include="Peggle.h" />
     <ClInclude Include="Resources.h" />
