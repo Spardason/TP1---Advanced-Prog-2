@@ -1,6 +1,10 @@
 #pragma once
-
 #include "GameiInclude.h"
+
+/*
+*	This is the main game class, wich will contain all game objects 
+*	Handle all the game actions and the relations between objects
+*/
 
 class Peggle :
 	public Component
@@ -22,5 +26,7 @@ private:
 	Navi *navi;
 	Bomb *bomb;
 	Bumper *bumper;
+	Sprite *s;
+	Sprite *s2;
 };
 

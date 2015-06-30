@@ -11,7 +11,9 @@ namespace Texture
 		Navi,
 		Bomb,
 		Bumper,
-		Pot
+		Pot,
+		WhiteSquare,
+		RedCircle
 	};
 }
 
