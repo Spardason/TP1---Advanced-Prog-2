@@ -15,11 +15,20 @@ public:
 	~Canon();
 
 	void Start() {}
-	void Update() {}
+	void Update();
 	void Stop() {}
 
+
+
 private:
+	void Rotate(float dt);
+	void Shoot(float dt);
+
 	const int SHOT_SPEED;
 	const int ROT_SPEED;
+	float mRotation;
+	float mShotTimer;
+
+	D3DXVECTOR3 mPivot;
 };
 

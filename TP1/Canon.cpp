@@ -3,14 +3,69 @@
 
 Canon::Canon()
 	: Sprite(Texture::ID::Canon)
-	, SHOT_SPEED(10)
-	, ROT_SPEED(100)
+	, SHOT_SPEED(1)
+	, ROT_SPEED(5)
+	, mRotation(0)
+	, mShotTimer(0)
+	, mPivot(GetTextureInfos()->infos.Width/2, GetTextureInfos()->infos.Height, 0.f)
 {
-
+	SetPivot(&mPivot);
+	SetPosition(0.f, gApp->GetParam().BackBufferHeight/2);
 }
 
 
 Canon::~Canon()
 {
 
+}
+
+void Canon::Update()
+{
+	float dt = gTimer->GetDeltaTime();
+
+	Rotate(dt);
+	Shoot(dt);
+}
+
+void Canon::Rotate(float dt)
+{
+	float maxRot = D3DX_PI / 2;
+	float maxRotNeg = -D3DX_PI / 2;
+
+	if (gDInput->keyDown(DIKEYBOARD_D))
+	{
+		if (mRotation <= maxRot)
+		{
+			mRotation += ROT_SPEED * dt;
+			SetRotation(0.f, 0.f, mRotation);
+		}
+	    else
+		{
+			mRotation = maxRot;
+		}
+	}
+
+	if (gDInput->keyDown(DIKEYBOARD_A))
+	{
+		if (mRotation >= maxRotNeg)
+		{
+			mRotation -= ROT_SPEED * dt;
+			SetRotation(0.f, 0.f, mRotation);
+		}
+		else
+		{
+			mRotation = maxRotNeg;
+		}
+	}
+}
+
+void Canon::Shoot(float dt)
+{
+	mShotTimer += dt;
+
+	if (gDInput->keyDown(DIKEYBOARD_SPACE) && mShotTimer >= SHOT_SPEED)
+	{
+		mShotTimer = 0;
+		std::cout << "PEW!" << std::endl;
+	}
 }

@@ -12,8 +12,8 @@ namespace Texture
 		Bomb,
 		Bumper,
 		Pot,
-		WhiteSquare,
-		RedCircle
+		SplashScreen,
+		LostScreen
 	};
 }
 

@@ -14,6 +14,7 @@ public:
 	Pot();
 	~Pot();
 
+	bool OnCollision() { return true; }
 	void Start() {}
 	void Update() {}
 	void Stop() {}
