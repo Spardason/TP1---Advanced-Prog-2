@@ -14,9 +14,9 @@ public:
 	Navi();
 	~Navi();
 
-	void Start();
-	void Update();
-	void Stop();
+	void Start() {}
+	void Update() {}
+	void Stop() {}
 
 private:
 	const int SPEED;

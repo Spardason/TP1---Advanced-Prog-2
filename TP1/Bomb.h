@@ -13,9 +13,10 @@ public:
 	Bomb();
 	~Bomb();
 
-	bool OnCollision();
-	void Start();
-	void Update();
-	void Stop();
+	bool OnCollision() { return true; }
+	void Start() {}
+	void Update() {}
+	void Stop() {}
+
 };
 

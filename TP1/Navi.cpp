@@ -3,6 +3,7 @@
 
 Navi::Navi()
 	: Sprite(Texture::ID::Navi)
+	, SPEED(10)
 {
 }
 

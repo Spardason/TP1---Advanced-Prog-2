@@ -3,6 +3,7 @@
 
 Pot::Pot()
 	: Sprite(Texture::ID::Pot)
+	, SPEED(10)
 {
 }
 

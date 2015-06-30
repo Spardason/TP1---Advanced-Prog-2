@@ -14,14 +14,12 @@ public:
 	Canon();
 	~Canon();
 
-	void Start();
-	void Update();
-	void Stop();
+	void Start() {}
+	void Update() {}
+	void Stop() {}
 
 private:
 	const int SHOT_SPEED;
 	const int ROT_SPEED;
-
-	D3DXVECTOR2 pos;
 };
 

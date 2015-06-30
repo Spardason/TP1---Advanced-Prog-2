@@ -1,6 +1,26 @@
-﻿La génération a démarré 2015-06-19 11:19:18.
+﻿La génération a démarré 2015-06-30 09:21:07.
      1>Projet "F:\S3\ProgAvancée2\TP1\TP1\TP1.vcxproj" sur le nœud 2 (Build cible(s)).
-     1>Link:
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Bomb.cpp Bumper.cpp Collidables.cpp Main.cpp Peggle.cpp
+         Bomb.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>f:\s3\progavancée2\engine\src\core\sprite.h(32): warning C4244: '=' : conversion de 'int' en 'FLOAT', perte possible de données
+     1>f:\s3\progavancée2\engine\src\core\sprite.h(48): warning C4244: 'argument' : conversion de 'LONG' en 'FLOAT', perte possible de données
+         Génération de code en cours...
+         Compilation en cours...
+         Collidables.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>f:\s3\progavancée2\engine\src\core\sprite.h(32): warning C4244: '=' : conversion de 'int' en 'FLOAT', perte possible de données
+     1>f:\s3\progavancée2\engine\src\core\sprite.h(48): warning C4244: 'argument' : conversion de 'LONG' en 'FLOAT', perte possible de données
+         Bumper.cpp
+         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+     1>f:\s3\progavancée2\engine\src\core\sprite.h(32): warning C4244: '=' : conversion de 'int' en 'FLOAT', perte possible de données
+     1>f:\s3\progavancée2\engine\src\core\sprite.h(48): warning C4244: 'argument' : conversion de 'LONG' en 'FLOAT', perte possible de données
+         Génération de code en cours...
+         Ignoré... (aucune modification pertinente détectée)
+         Peggle.cpp
+         Main.cpp
+       Link:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\S3\ProgAvancée2\TP1\Debug\TP1.exe" /INCREMENTAL /NOLOGO d3d9.lib d3dx9.lib dxerr.lib dxguid.lib dinput8.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\S3\ProgAvancée2\TP1\Debug\TP1.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\S3\ProgAvancée2\TP1\Debug\TP1.lib" /MACHINE:X86 Debug\Bomb.obj
          Debug\Bumper.obj
          Debug\Canon.obj
@@ -16,4 +36,4 @@
 
 La génération a réussi.
 
-Temps écoulé 00:00:00.82
+Temps écoulé 00:00:03.98
