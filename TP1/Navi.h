@@ -12,6 +12,7 @@ class Navi :
 {
 public:
 	Navi();
+	Navi(D3DXVECTOR2 basePos);
 	~Navi();
 
 
@@ -20,10 +21,19 @@ public:
 	void Update();
 	void Stop() {}
 
+	void SetRotation(float rot){ mRotation = rot; }
+
+	void Activate(D3DXVECTOR2 pos);
+	void Deactivate();
+
 private:
 	void Move(float dt);
 
 	D3DXVECTOR3 mCenter;
+	D3DXVECTOR3 mDir;
+	D3DXVECTOR3 mPos;
+
+	float mRotation;
 	const int SPEED;
 };
 

@@ -7,7 +7,7 @@ Peggle::Peggle()
 	//bg = new Sprite(Texture::ID::Bg);
 
 	canon = new Canon();
-	navi = new Navi();
+	//navi = new Navi();
 	//std::cout << canon->GetPosition().x;
 	//canon->SetPosition(100, 100);
 	//D3DXVECTOR2 pos(canon->GetPosition().x, canon->GetPosition().y);

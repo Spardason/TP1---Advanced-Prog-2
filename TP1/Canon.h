@@ -1,6 +1,7 @@
 #pragma once
 #include "Sprite.h"
 #include "Resources.h"
+#include "Navi.h"
 
 /*
 *	This is the class fro the canon
@@ -18,8 +19,6 @@ public:
 	void Update();
 	void Stop() {}
 
-
-
 private:
 	void Rotate(float dt);
 	void Shoot(float dt);
@@ -28,6 +27,8 @@ private:
 	const int ROT_SPEED;
 	float mRotation;
 	float mShotTimer;
+
+	Navi *mBullet;
 
 	D3DXVECTOR3 mPivot;
 };
