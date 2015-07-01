@@ -8,3 +8,4 @@
 #include "Canon.h"
 #include "Collidables.h"
 #include "Navi.h"
+#include "Background.h"

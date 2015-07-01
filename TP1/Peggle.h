@@ -1,5 +1,6 @@
 #pragma once
 #include "GameiInclude.h"
+#include "vector"
 
 /*
 *	This is the main game class, wich will contain all game objects 
@@ -20,9 +21,14 @@ public:
 
 private:
 	void LoadTextures();
+	void CreateCollidables(int nbBombs, int nbBumpers);
+	void CollidablesPlacement();
+
+	std::vector<Collidables*> collidables;
+	std::vector<Collidables*>::iterator it;
 
 	Canon *canon;
-	Sprite *bg;
+	Background *bg;
 	Navi *navi;
 	Bomb *bomb;
 	Bumper *bumper;

@@ -4,29 +4,23 @@ Peggle::Peggle()
 {
 	LoadTextures();
 
-	//bg = new Sprite(Texture::ID::Bg);
+	bg = new Background();
+
+
 
 	canon = new Canon();
-	//navi = new Navi();
-	//std::cout << canon->GetPosition().x;
-	//canon->SetPosition(100, 100);
-	//D3DXVECTOR2 pos(canon->GetPosition().x, canon->GetPosition().y);
-
-	//canon->SetPosition(0, 0);
-	//canon->SetRotation(180 * (PI / 180));
-	//canon->SetPosition(pos.x, pos.y);
-	
-	//navi = new Navi();
-	//navi->SetPosition(-150, -200);
-	//bomb = new Bomb();
-	//bomb->SetPosition(100, 100);
-	//bumper = new Bumper();
 }
 
 Peggle::~Peggle()
 {
+	collidables.clear();
+	
+
 	delete canon;
 	canon = nullptr;
+
+	delete bg;
+	bg = nullptr;
 }
 
 void Peggle::Start()
@@ -36,18 +30,7 @@ void Peggle::Start()
 
 void Peggle::Update()
 {
-	// mvmnt test
-	//if (gDInput->keyDown(DIKEYBOARD_W))
-	//{
-	//	//s->SetPosition(s->GetPosition().x, s->GetPosition().y - 1);
-	//}
-	//
-	//if (gDInput->keyDown(DIKEYBOARD_A))
-	//{
-	//	//s->SetPosition(s->GetPosition().x - 1, s->GetPosition().y);
-	//}
-	//
-	//std::cout << s->GetPosition().x << ", " << s->GetPosition().y << std::endl;
+
 }
 
 void Peggle::Draw()
@@ -70,4 +53,36 @@ void Peggle::LoadTextures()
 	Textures->LoadTexture(Texture::Pot, "Sprites/Jar.png");
 	Textures->LoadTexture(Texture::SplashScreen, "Sprites/SplashScreen.png");
 	Textures->LoadTexture(Texture::LostScreen, "Sprites/LostScreen.png");
+}
+
+void Peggle::CreateCollidables(int nbBombs, int nbBumpers)
+{
+	for (int i = 0; i < nbBombs; i++)
+	{
+		Bomb *b = new Bomb();
+		collidables.push_back(b);
+	}
+
+	for (int j = 0; j < nbBumpers; j++)
+	{
+		Bumper *bp = new Bumper();
+		collidables.push_back(bp);
+	}
+}
+
+void Peggle::CollidablesPlacement()
+{
+	int posX = -50;
+	for (it = collidables.begin(); it < collidables.end(); it++)
+	{
+		if ( < collidables.end / 2)
+		{
+			c
+		}
+		else
+		{
+			i = 0;
+			collidables[i]->SetPosition(posX + (i * 30), 30);
+		}
+	}
 }

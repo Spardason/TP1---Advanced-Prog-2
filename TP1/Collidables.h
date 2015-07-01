@@ -18,9 +18,6 @@ public:
 	virtual bool OnCollision() { return true; }
 	virtual void Start() {}
 	virtual void Update() {}
-	virtual void Stop() {}
-
-private:
-	D3DXVECTOR2 pos;
+	virtual void Stop() {}	
 };
 

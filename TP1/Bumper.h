@@ -17,5 +17,8 @@ public:
 	void Start() {}
 	void Update() {}
 	void Stop() {}
+
+private:
+	D3DXVECTOR3 mCenter;
 };
 
