@@ -25,14 +25,13 @@ private:
 	void CollidablesPlacement();
 
 	std::vector<Collidables*> collidables;
-	std::vector<Collidables*>::iterator it;
+	std::vector<Collidables*>::iterator *it;
 
+	Pot *pot;
 	Canon *canon;
 	Background *bg;
 	Navi *navi;
 	Bomb *bomb;
 	Bumper *bumper;
-	Sprite *s;
-	Sprite *s2;
 };
 

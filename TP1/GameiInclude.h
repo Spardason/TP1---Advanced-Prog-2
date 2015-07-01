@@ -9,3 +9,4 @@
 #include "Collidables.h"
 #include "Navi.h"
 #include "Background.h"
+#include "Pot.h"

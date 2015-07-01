@@ -16,10 +16,17 @@ public:
 
 	bool OnCollision() { return true; }
 	void Start() {}
-	void Update() {}
+	void Update();
 	void Stop() {}
 
 private:
+	void Move(float dt);
+
 	const int SPEED;
+	const int LEFT_BORDER;
+	const int RIGHT_BORDER;
+
+	D3DXVECTOR3 mPos;
+	D3DXVECTOR3 mCenter;
 };
 

@@ -6,21 +6,25 @@ Peggle::Peggle()
 
 	bg = new Background();
 
-
+	CreateCollidables(10, 10);
+	CollidablesPlacement();
 
 	canon = new Canon();
+	pot = new Pot();
 }
 
 Peggle::~Peggle()
 {
 	collidables.clear();
 	
-
 	delete canon;
 	canon = nullptr;
 
 	delete bg;
 	bg = nullptr;
+
+	delete pot;
+	pot = nullptr;
 }
 
 void Peggle::Start()
@@ -57,6 +61,7 @@ void Peggle::LoadTextures()
 
 void Peggle::CreateCollidables(int nbBombs, int nbBumpers)
 {
+	collidables.clear();
 	for (int i = 0; i < nbBombs; i++)
 	{
 		Bomb *b = new Bomb();
@@ -72,17 +77,20 @@ void Peggle::CreateCollidables(int nbBombs, int nbBumpers)
 
 void Peggle::CollidablesPlacement()
 {
-	int posX = -50;
+	int index = 0;
+	int basePos = -(gApp->GetParam().BackBufferWidth / 3);
+	std::vector<Collidables*>::iterator it;
 	for (it = collidables.begin(); it < collidables.end(); it++)
 	{
-		if ( < collidables.end / 2)
+		if (index % 2 == 0)
 		{
-			c
+			(*it)->SetPosition(basePos + (index * 30), 0);
+			index++;
 		}
 		else
 		{
-			i = 0;
-			collidables[i]->SetPosition(posX + (i * 30), 30);
+			(*it)->SetPosition(basePos + (index * 30), 50);
+			index++;
 		}
 	}
 }

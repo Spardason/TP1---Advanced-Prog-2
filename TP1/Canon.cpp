@@ -11,6 +11,7 @@ Canon::Canon()
 {
 	SetPivot(&mPivot);
 	SetPosition(0.f, gApp->GetParam().BackBufferHeight/2);
+
 	D3DXVECTOR2 pos(GetPosition());
 	mBullet = new Navi(pos);
 	mBullet->Deactivate();

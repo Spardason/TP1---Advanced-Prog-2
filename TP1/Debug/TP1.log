@@ -1,28 +1,32 @@
-﻿Build started 2015-07-01 13:37:42.
+﻿Build started 2015-07-01 17:27:45.
      1>Project "G:\S3\ProgAvancée2\TP1\TP1\TP1.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Main.cpp Peggle.cpp
-         Peggle.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Pot.cpp
+         Pot.cpp
          c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
      1>g:\s3\progavancée2\engine\src\core\sprite.h(26): warning C4244: 'argument' : conversion from 'LONG' to 'FLOAT', possible loss of data
      1>g:\s3\progavancée2\engine\src\core\sprite.h(27): warning C4244: 'argument' : conversion from 'LONG' to 'FLOAT', possible loss of data
-     1>g:\s3\progavancée2\tp1\tp1\peggle.cpp(78): error C2059: syntax error : '<'
-     1>g:\s3\progavancée2\tp1\tp1\peggle.cpp(79): error C2143: syntax error : missing ';' before '{'
-     1>g:\s3\progavancée2\tp1\tp1\peggle.cpp(81): error C2065: 'c' : undeclared identifier
-     1>g:\s3\progavancée2\tp1\tp1\peggle.cpp(81): error C2143: syntax error : missing ';' before '}'
-     1>g:\s3\progavancée2\tp1\tp1\peggle.cpp(82): error C2181: illegal else without matching if
-     1>g:\s3\progavancée2\tp1\tp1\peggle.cpp(84): error C2065: 'i' : undeclared identifier
-     1>g:\s3\progavancée2\tp1\tp1\peggle.cpp(85): error C2065: 'i' : undeclared identifier
-     1>g:\s3\progavancée2\tp1\tp1\peggle.cpp(85): error C2227: left of '->SetPosition' must point to class/struct/union/generic type
-         Generating Code...
-         Compiling...
-         Main.cpp
-         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-     1>g:\s3\progavancée2\engine\src\core\sprite.h(26): warning C4244: 'argument' : conversion from 'LONG' to 'FLOAT', possible loss of data
-     1>g:\s3\progavancée2\engine\src\core\sprite.h(27): warning C4244: 'argument' : conversion from 'LONG' to 'FLOAT', possible loss of data
-         Generating Code...
-     1>Done Building Project "G:\S3\ProgAvancée2\TP1\TP1\TP1.vcxproj" (Build target(s)) -- FAILED.
+     1>g:\s3\progavancée2\tp1\tp1\pot.cpp(7): warning C4146: unary minus operator applied to unsigned type, result still unsigned
+     1>g:\s3\progavancée2\tp1\tp1\pot.cpp(11): warning C4244: 'argument' : conversion from 'UINT' to 'FLOAT', possible loss of data
+     1>g:\s3\progavancée2\tp1\tp1\pot.cpp(14): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>g:\s3\progavancée2\tp1\tp1\pot.cpp(44): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"G:\S3\ProgAvancée2\TP1\Debug\TP1.exe" /INCREMENTAL /NOLOGO d3d9.lib d3dx9.lib dxerr.lib dxguid.lib dinput8.lib irrklang.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"G:\S3\ProgAvancée2\TP1\Debug\TP1.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:\S3\ProgAvancée2\TP1\Debug\TP1.lib" /MACHINE:X86 Debug\Background.obj
+         Debug\Bomb.obj
+         Debug\Bumper.obj
+         Debug\Canon.obj
+         Debug\Collidables.obj
+         Debug\LostScreen.obj
+         Debug\Main.obj
+         Debug\Navi.obj
+         Debug\Peggle.obj
+         Debug\Pot.obj
+         Debug\SplashScreen.obj
+         "G:\S3\ProgAvancée2\TP1\Debug\App.lib"
+         "G:\S3\ProgAvancée2\TP1\Debug\Core.lib"
+         TP1.vcxproj -> G:\S3\ProgAvancée2\TP1\Debug\TP1.exe
+     1>Done Building Project "G:\S3\ProgAvancée2\TP1\TP1\TP1.vcxproj" (Build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:01.87
+Time Elapsed 00:00:01.43
