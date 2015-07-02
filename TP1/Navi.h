@@ -31,7 +31,7 @@ private:
 
 	D3DXVECTOR3 mCenter;
 	D3DXVECTOR3 mDir;
-	D3DXVECTOR3 mPos;
+	//D3DXVECTOR3 mPos;
 
 	float mRotation;
 	const int SPEED;

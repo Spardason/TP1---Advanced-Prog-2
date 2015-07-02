@@ -9,7 +9,7 @@ Canon::Canon()
 	, mBullet(nullptr)
 	, mPivot(GetTextureInfos()->infos.Width/2, GetTextureInfos()->infos.Height, 0.f)
 {
-	SetPivot(&mPivot);
+	SetPivot(mPivot);
 	SetPosition(0.f, gApp->GetParam().BackBufferHeight/2);
 
 	D3DXVECTOR2 pos(GetPosition());
@@ -42,7 +42,7 @@ void Canon::Rotate(float dt)
 		if (mRotation <= maxRot)
 		{
 			mRotation += ROT_SPEED * dt;
-			SetRotation(0.f, 0.f, mRotation);
+			SetRotationRad(0.f, 0.f, mRotation);
 		}
 	    else
 		{
@@ -55,7 +55,7 @@ void Canon::Rotate(float dt)
 		if (mRotation >= maxRotNeg)
 		{
 			mRotation -= ROT_SPEED * dt;
-			SetRotation(0.f, 0.f, mRotation);
+			SetRotationRad(0.f, 0.f, mRotation);
 		}
 		else
 		{
@@ -72,7 +72,6 @@ void Canon::Shoot(float dt)
 	{
 		D3DXVECTOR2 dir(-sinf(mRotation), cosf(mRotation));
 		D3DXVECTOR2 pos(GetPosition());
-		//D3DXVECTOR2 pos(10, 10);
 
 		mShotTimer = 0;
 		mBullet->SetRotation(mRotation);

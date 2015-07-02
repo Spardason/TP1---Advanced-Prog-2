@@ -17,6 +17,16 @@ namespace Texture
 	};
 }
 
+namespace Components
+{
+	enum ID
+	{
+		Bomb, 
+		Bumper, 
+		Ball
+	};
+}
+
 //namespace Sound
 //{
 //	enum ID

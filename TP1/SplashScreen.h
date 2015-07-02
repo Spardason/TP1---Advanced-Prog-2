@@ -15,6 +15,6 @@ public:
 
 private:
 	D3DXVECTOR3 mCenter;
-	D3DXVECTOR3 mPos;
+	//D3DXVECTOR3 mPos;
 };
 

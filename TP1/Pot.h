@@ -26,7 +26,7 @@ private:
 	const int LEFT_BORDER;
 	const int RIGHT_BORDER;
 
-	D3DXVECTOR3 mPos;
+	//D3DXVECTOR3 mPos;
 	D3DXVECTOR3 mCenter;
 };
 

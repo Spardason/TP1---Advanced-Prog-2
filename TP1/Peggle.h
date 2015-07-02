@@ -1,6 +1,7 @@
 #pragma once
 #include "GameiInclude.h"
 #include "vector"
+#include <algorithm>
 
 /*
 *	This is the main game class, wich will contain all game objects 
@@ -22,7 +23,7 @@ public:
 private:
 	void LoadTextures();
 	void CreateCollidables(int nbBombs, int nbBumpers);
-	void CollidablesPlacement();
+	void CollidablesPlacement(int nbInRow);
 	void Replay();
 	void StartGame();
 

@@ -15,5 +15,8 @@ LostScreen::~LostScreen()
 
 void LostScreen::Update()
 {
-
+	if (gDInput->keyDown(DIKEYBOARD_SPACE))
+	{
+		SetVisible(false);
+	}
 }

@@ -66,6 +66,7 @@ void Peggle::LoadTextures()
 void Peggle::CreateCollidables(int nbBombs, int nbBumpers)
 {
 	collidables.clear();
+
 	for (int i = 0; i < nbBombs; i++)
 	{
 		Bomb *b = new Bomb();
@@ -77,24 +78,24 @@ void Peggle::CreateCollidables(int nbBombs, int nbBumpers)
 		Bumper *bp = new Bumper();
 		collidables.push_back(bp);
 	}
+
+	std::random_shuffle(collidables.begin(), collidables.end());
 }
 
-void Peggle::CollidablesPlacement()
+void Peggle::CollidablesPlacement(int nbInRow)
 {
 	int index = 0;
-	int basePos = -(gApp->GetParam().BackBufferWidth / 3);
-	for (it = collidables.begin(); it < collidables.end(); it++)
+	int basePos = -(gApp->GetParam().BackBufferWidth / 3 + 15);
+
+	for (it = collidables.begin(); it != collidables.end(); it++)
 	{
-		if (index % 2 == 0)
-		{
-			(*it)->SetPosition(basePos + (index * 30), 0);
-			index++;
-		}
-		else
-		{
-			(*it)->SetPosition(basePos + (index * 30), 50);
-			index++;
-		}
+		float x = (index % nbInRow);
+		float y = (index / nbInRow);
+
+		std::cout << "X: " << x << " Y: " << y << std::endl;
+		(*it)->SetPosition(basePos + x * 60, y * 60 );
+
+		index++;
 	}
 }
 
@@ -113,8 +114,8 @@ void Peggle::StartGame()
 {
 	bg = new Background();
 
-	CreateCollidables(10, 10);
-	CollidablesPlacement();
+	CreateCollidables(20, 20);
+	CollidablesPlacement(10);
 
 	canon = new Canon();
 	pot = new Pot();

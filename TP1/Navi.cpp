@@ -6,10 +6,9 @@ Navi::Navi()
 	, SPEED(10)
 	, mRotation(0)
 	, mDir(0.f, 0.f, 0.f)
-	, mPos(0.f, 0.f, 0.f)
 	, mCenter(GetTextureInfos()->infos.Width / 2, GetTextureInfos()->infos.Height / 2, 0.f)
 {
-	SetPivot(&mCenter);
+	SetPivot(mCenter);
 	SetVisible(false);
 }
 
@@ -18,11 +17,10 @@ Navi::Navi(D3DXVECTOR2 basePos)
 	, SPEED(100)
 	, mRotation(0)
 	, mDir(0.f, 0.f, 0.f)
-	, mPos(basePos)
 	, mCenter(GetTextureInfos()->infos.Width / 2, GetTextureInfos()->infos.Height / 2, 0.f)
 {
-	SetPivot(&mCenter);
-	SetPosition(mPos.x, mPos.y);
+	SetPivot(mCenter);
+	SetPosition(basePos.x, basePos.y);
 	SetVisible(false);
 }
 
@@ -35,8 +33,6 @@ void Navi::Activate(D3DXVECTOR2 pos)
 {
 	SetPosition(pos.x, pos.y);
 	SetVisible(true);
-	mPos.x = pos.x;
-	mPos.y = pos.y;
 }
 
 void Navi::Deactivate()
@@ -58,11 +54,13 @@ void Navi::Move(float dt)
 {	
 	static float timer = 0;
 
+	D3DXVECTOR3 tempPos = GetPosition();
 	mDir = -D3DXVECTOR3(-sinf(mRotation), cosf(mRotation), 0.f);
 
-	mPos += mDir * SPEED * dt;
+	//mPos += mDir * SPEED * dt;
+	tempPos += mDir * SPEED * dt;
 
-	SetPosition(mPos.x, mPos.y);
+	SetPosition(tempPos.x, tempPos.y);
 
 	timer += dt;
 

@@ -11,6 +11,7 @@ int WINAPI _tWinMain(HINSTANCE hInstance,
 	gEngine = engine;
 	engine->Init();
 
+
 	Peggle* game = new Peggle();
 
 	int assert = gEngine->Run();
