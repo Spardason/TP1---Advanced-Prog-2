@@ -23,9 +23,13 @@ private:
 	void LoadTextures();
 	void CreateCollidables(int nbBombs, int nbBumpers);
 	void CollidablesPlacement();
+	void Replay();
+	void StartGame();
 
 	std::vector<Collidables*> collidables;
-	std::vector<Collidables*>::iterator *it;
+	std::vector<Collidables*>::iterator it;
+
+	bool gameStarted;
 
 	Pot *pot;
 	Canon *canon;
@@ -33,5 +37,7 @@ private:
 	Navi *navi;
 	Bomb *bomb;
 	Bumper *bumper;
+	SplashScreen *sp;
+	LostScreen *ls;
 };
 

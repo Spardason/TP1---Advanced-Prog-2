@@ -4,9 +4,16 @@
 LostScreen::LostScreen()
 	: Sprite(Texture::ID::LostScreen)
 {
+
 }
 
 
 LostScreen::~LostScreen()
 {
+
+}
+
+void LostScreen::Update()
+{
+
 }

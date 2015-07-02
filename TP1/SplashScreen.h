@@ -8,5 +8,13 @@ class SplashScreen :
 public:
 	SplashScreen();
 	~SplashScreen();
+
+	void Start() {}
+	void Update();
+	void Stop() {}
+
+private:
+	D3DXVECTOR3 mCenter;
+	D3DXVECTOR3 mPos;
 };
 

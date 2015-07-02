@@ -8,5 +8,9 @@ class LostScreen :
 public:
 	LostScreen();
 	~LostScreen();
+
+	void Start() {}
+	void Update();
+	void Stop() {}
 };
 

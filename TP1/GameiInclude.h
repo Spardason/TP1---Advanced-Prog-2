@@ -10,3 +10,5 @@
 #include "Navi.h"
 #include "Background.h"
 #include "Pot.h"
+#include "LostScreen.h"
+#include "SplashScreen.h"

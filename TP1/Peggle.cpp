@@ -1,30 +1,30 @@
 #include "Peggle.h"
 
 Peggle::Peggle()
+	: gameStarted(false)
 {
 	LoadTextures();
-
-	bg = new Background();
-
-	CreateCollidables(10, 10);
-	CollidablesPlacement();
-
-	canon = new Canon();
-	pot = new Pot();
+	sp = new SplashScreen();
 }
 
 Peggle::~Peggle()
 {
 	collidables.clear();
 	
-	delete canon;
-	canon = nullptr;
+	if (gameStarted)
+	{
+		delete bg;
+		bg = nullptr;
+	
+		delete pot;
+		pot = nullptr;
 
-	delete bg;
-	bg = nullptr;
+		delete canon;
+		canon = nullptr;
+	}
 
-	delete pot;
-	pot = nullptr;
+	delete sp;
+	sp = nullptr;	
 }
 
 void Peggle::Start()
@@ -34,7 +34,11 @@ void Peggle::Start()
 
 void Peggle::Update()
 {
-
+	if (!sp->IsVisible() && !gameStarted)
+	{
+		gameStarted = true;
+		StartGame();
+	}
 }
 
 void Peggle::Draw()
@@ -79,7 +83,6 @@ void Peggle::CollidablesPlacement()
 {
 	int index = 0;
 	int basePos = -(gApp->GetParam().BackBufferWidth / 3);
-	std::vector<Collidables*>::iterator it;
 	for (it = collidables.begin(); it < collidables.end(); it++)
 	{
 		if (index % 2 == 0)
@@ -93,4 +96,26 @@ void Peggle::CollidablesPlacement()
 			index++;
 		}
 	}
+}
+
+void Peggle::Replay()
+{
+	for (it = collidables.begin(); it < collidables.end(); it++)
+	{
+		if (!(*it)->IsVisible())
+		{
+			(*it)->SetVisible(true);
+		}
+	}
+}
+
+void Peggle::StartGame()
+{
+	bg = new Background();
+
+	CreateCollidables(10, 10);
+	CollidablesPlacement();
+
+	canon = new Canon();
+	pot = new Pot();
 }
