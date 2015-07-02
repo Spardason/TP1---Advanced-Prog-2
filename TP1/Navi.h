@@ -1,6 +1,7 @@
 #pragma once
 #include "Sprite.h"
 #include "Resources.h"
+#include "CCircle.h"
 
 /*
 *	This is the class for the Bullet
@@ -15,8 +16,6 @@ public:
 	Navi(D3DXVECTOR2 basePos);
 	~Navi();
 
-
-	//bool OnCollision() { return true; }
 	void Start() {}
 	void Update();
 	void Stop() {}
@@ -29,9 +28,10 @@ public:
 private:
 	void Move(float dt);
 
+	CCircle *collider;
+
 	D3DXVECTOR3 mCenter;
 	D3DXVECTOR3 mDir;
-	//D3DXVECTOR3 mPos;
 
 	float mRotation;
 	const int SPEED;

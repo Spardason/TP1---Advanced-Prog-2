@@ -1,6 +1,7 @@
 #pragma once
 #include "Sprite.h"
 #include "Resources.h"
+#include "CCircle.h"
 
 /*
 *	Class for the base collidables
@@ -19,5 +20,8 @@ public:
 	virtual void Start() {}
 	virtual void Update() {}
 	virtual void Stop() {}	
+
+private:
+	CCircle *collider;
 };
 

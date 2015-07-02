@@ -8,6 +8,8 @@ Navi::Navi()
 	, mDir(0.f, 0.f, 0.f)
 	, mCenter(GetTextureInfos()->infos.Width / 2, GetTextureInfos()->infos.Height / 2, 0.f)
 {
+	collider = new CCircle(this,0.f, 0.f, GetTextureInfos()->infos.Width);
+	SetID(Components::ID::Ball);
 	SetPivot(mCenter);
 	SetVisible(false);
 }
@@ -19,6 +21,8 @@ Navi::Navi(D3DXVECTOR2 basePos)
 	, mDir(0.f, 0.f, 0.f)
 	, mCenter(GetTextureInfos()->infos.Width / 2, GetTextureInfos()->infos.Height / 2, 0.f)
 {
+	collider = new CCircle(this, 0.f, 0.f, GetTextureInfos()->infos.Width);
+	SetID(Components::ID::Ball);
 	SetPivot(mCenter);
 	SetPosition(basePos.x, basePos.y);
 	SetVisible(false);
@@ -47,7 +51,19 @@ void Navi::Update()
 	if (isVisible)
 	{
 		Move(dt);
+		//Go through each collider collided with though the LookForCollision Function
+		for each (Collider* col in collider->LookForCollisions())
+		{
+			//If one of the collider is a block
+			if (col->GetGameObject()->GetID() == Components::Block)
+			{
+				//Consider that collider's component a block and make him shout
+				static_cast<Block*>(col->GetGameObject())->Shout();
+			}
+		}
 	}
+
+	
 }
 
 void Navi::Move(float dt)

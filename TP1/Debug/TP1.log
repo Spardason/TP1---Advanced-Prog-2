@@ -1,49 +1,9 @@
-﻿La génération a démarré 2015-07-02 11:58:46.
+﻿La génération a démarré 2015-07-02 16:18:21.
      1>Projet "F:\S3\ProgAvancée2\TP1\TP1\TP1.vcxproj" sur le nœud 2 (Build cible(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Background.cpp Bomb.cpp Bumper.cpp Canon.cpp Collidables.cpp LostScreen.cpp Main.cpp Navi.cpp Peggle.cpp Pot.cpp SplashScreen.cpp
-         Bumper.cpp
-         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-     1>f:\s3\progavancée2\engine\src\core\sprite.h(20): warning C4244: 'argument' : conversion de 'LONG' en 'FLOAT', perte possible de données
-     1>f:\s3\progavancée2\engine\src\core\sprite.h(25): warning C4244: '=' : conversion de 'float' en 'LONG', perte possible de données
-     1>f:\s3\progavancée2\engine\src\core\sprite.h(27): warning C4244: '=' : conversion de 'float' en 'LONG', perte possible de données
-     1>f:\s3\progavancée2\engine\src\core\sprite.h(28): warning C4244: '=' : conversion de 'float' en 'LONG', perte possible de données
-     1>f:\s3\progavancée2\tp1\tp1\bumper.cpp(7): warning C4244: 'argument' : conversion de 'UINT' en 'FLOAT', perte possible de données
-         Bomb.cpp
-         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-     1>f:\s3\progavancée2\engine\src\core\sprite.h(20): warning C4244: 'argument' : conversion de 'LONG' en 'FLOAT', perte possible de données
-     1>f:\s3\progavancée2\engine\src\core\sprite.h(25): warning C4244: '=' : conversion de 'float' en 'LONG', perte possible de données
-     1>f:\s3\progavancée2\engine\src\core\sprite.h(27): warning C4244: '=' : conversion de 'float' en 'LONG', perte possible de données
-     1>f:\s3\progavancée2\engine\src\core\sprite.h(28): warning C4244: '=' : conversion de 'float' en 'LONG', perte possible de données
-     1>f:\s3\progavancée2\tp1\tp1\bomb.cpp(7): warning C4244: 'argument' : conversion de 'UINT' en 'FLOAT', perte possible de données
-         Génération de code en cours...
-         Compilation en cours...
-         SplashScreen.cpp
-         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-     1>f:\s3\progavancée2\engine\src\core\sprite.h(20): warning C4244: 'argument' : conversion de 'LONG' en 'FLOAT', perte possible de données
-     1>f:\s3\progavancée2\engine\src\core\sprite.h(25): warning C4244: '=' : conversion de 'float' en 'LONG', perte possible de données
-     1>f:\s3\progavancée2\engine\src\core\sprite.h(27): warning C4244: '=' : conversion de 'float' en 'LONG', perte possible de données
-     1>f:\s3\progavancée2\engine\src\core\sprite.h(28): warning C4244: '=' : conversion de 'float' en 'LONG', perte possible de données
-     1>f:\s3\progavancée2\tp1\tp1\splashscreen.cpp(8): warning C4244: 'argument' : conversion de 'UINT' en 'FLOAT', perte possible de données
-     1>f:\s3\progavancée2\tp1\tp1\splashscreen.cpp(22): warning C4305: 'argument' : troncation de 'unsigned int' à 'unsigned char'
-     1>f:\s3\progavancée2\tp1\tp1\splashscreen.cpp(22): warning C4309: 'argument' : troncation de valeur de constante
-         Pot.cpp
-         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-     1>f:\s3\progavancée2\engine\src\core\sprite.h(20): warning C4244: 'argument' : conversion de 'LONG' en 'FLOAT', perte possible de données
-     1>f:\s3\progavancée2\engine\src\core\sprite.h(25): warning C4244: '=' : conversion de 'float' en 'LONG', perte possible de données
-     1>f:\s3\progavancée2\engine\src\core\sprite.h(27): warning C4244: '=' : conversion de 'float' en 'LONG', perte possible de données
-     1>f:\s3\progavancée2\engine\src\core\sprite.h(28): warning C4244: '=' : conversion de 'float' en 'LONG', perte possible de données
-     1>f:\s3\progavancée2\tp1\tp1\pot.cpp(7): warning C4146: opérateur moins unaire appliqué à un type non signé, le résultat sera non signé
-     1>f:\s3\progavancée2\tp1\tp1\pot.cpp(11): warning C4244: 'argument' : conversion de 'UINT' en 'FLOAT', perte possible de données
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Canon.cpp Main.cpp Navi.cpp Peggle.cpp
          Peggle.cpp
-         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-     1>f:\s3\progavancée2\engine\src\core\sprite.h(20): warning C4244: 'argument' : conversion de 'LONG' en 'FLOAT', perte possible de données
-     1>f:\s3\progavancée2\engine\src\core\sprite.h(25): warning C4244: '=' : conversion de 'float' en 'LONG', perte possible de données
-     1>f:\s3\progavancée2\engine\src\core\sprite.h(27): warning C4244: '=' : conversion de 'float' en 'LONG', perte possible de données
-     1>f:\s3\progavancée2\engine\src\core\sprite.h(28): warning C4244: '=' : conversion de 'float' en 'LONG', perte possible de données
-     1>f:\s3\progavancée2\tp1\tp1\peggle.cpp(88): warning C4146: opérateur moins unaire appliqué à un type non signé, le résultat sera non signé
-     1>f:\s3\progavancée2\tp1\tp1\peggle.cpp(92): warning C4244: 'initialisation' : conversion de 'int' en 'float', perte possible de données
-     1>f:\s3\progavancée2\tp1\tp1\peggle.cpp(93): warning C4244: 'initialisation' : conversion de 'int' en 'float', perte possible de données
+     1>f:\s3\progavancée2\tp1\tp1\peggle.cpp : fatal error C1041: impossible d'ouvrir la base de données du programme 'f:\s3\progavancée2\tp1\tp1\debug\vc120.idb' ; si plusieurs CL.EXE écrivent dans le même fichier .PDB, utilisez /FS.
          Navi.cpp
          c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
      1>f:\s3\progavancée2\engine\src\core\sprite.h(20): warning C4244: 'argument' : conversion de 'LONG' en 'FLOAT', perte possible de données
@@ -51,23 +11,12 @@
      1>f:\s3\progavancée2\engine\src\core\sprite.h(27): warning C4244: '=' : conversion de 'float' en 'LONG', perte possible de données
      1>f:\s3\progavancée2\engine\src\core\sprite.h(28): warning C4244: '=' : conversion de 'float' en 'LONG', perte possible de données
      1>f:\s3\progavancée2\tp1\tp1\navi.cpp(10): warning C4244: 'argument' : conversion de 'UINT' en 'FLOAT', perte possible de données
-     1>f:\s3\progavancée2\tp1\tp1\navi.cpp(21): warning C4244: 'argument' : conversion de 'UINT' en 'FLOAT', perte possible de données
-     1>f:\s3\progavancée2\tp1\tp1\navi.cpp(61): warning C4244: 'argument' : conversion de 'const int' en 'FLOAT', perte possible de données
+     1>f:\s3\progavancée2\tp1\tp1\navi.cpp(22): warning C4244: 'argument' : conversion de 'UINT' en 'FLOAT', perte possible de données
+     1>f:\s3\progavancée2\tp1\tp1\navi.cpp(53): error C2065: 'collider' : identificateur non déclaré
+     1>f:\s3\progavancée2\tp1\tp1\navi.cpp(53): error C2227: la partie gauche de '->LookForCollisions' doit pointer vers un type class/struct/union/générique
+                 le type est 'unknown-type'
+     1>f:\s3\progavancée2\tp1\tp1\navi.cpp(53): fatal error C1903: impossible de récupérer à partir des erreurs précédentes ; arrêt de la compilation
          Main.cpp
-         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-     1>f:\s3\progavancée2\engine\src\core\sprite.h(20): warning C4244: 'argument' : conversion de 'LONG' en 'FLOAT', perte possible de données
-     1>f:\s3\progavancée2\engine\src\core\sprite.h(25): warning C4244: '=' : conversion de 'float' en 'LONG', perte possible de données
-     1>f:\s3\progavancée2\engine\src\core\sprite.h(27): warning C4244: '=' : conversion de 'float' en 'LONG', perte possible de données
-     1>f:\s3\progavancée2\engine\src\core\sprite.h(28): warning C4244: '=' : conversion de 'float' en 'LONG', perte possible de données
-         LostScreen.cpp
-         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-     1>f:\s3\progavancée2\engine\src\core\sprite.h(20): warning C4244: 'argument' : conversion de 'LONG' en 'FLOAT', perte possible de données
-     1>f:\s3\progavancée2\engine\src\core\sprite.h(25): warning C4244: '=' : conversion de 'float' en 'LONG', perte possible de données
-     1>f:\s3\progavancée2\engine\src\core\sprite.h(27): warning C4244: '=' : conversion de 'float' en 'LONG', perte possible de données
-     1>f:\s3\progavancée2\engine\src\core\sprite.h(28): warning C4244: '=' : conversion de 'float' en 'LONG', perte possible de données
-     1>f:\s3\progavancée2\tp1\tp1\lostscreen.cpp(18): warning C4305: 'argument' : troncation de 'unsigned int' à 'unsigned char'
-     1>f:\s3\progavancée2\tp1\tp1\lostscreen.cpp(18): warning C4309: 'argument' : troncation de valeur de constante
-         Collidables.cpp
          c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
      1>f:\s3\progavancée2\engine\src\core\sprite.h(20): warning C4244: 'argument' : conversion de 'LONG' en 'FLOAT', perte possible de données
      1>f:\s3\progavancée2\engine\src\core\sprite.h(25): warning C4244: '=' : conversion de 'float' en 'LONG', perte possible de données
@@ -87,31 +36,9 @@
      1>f:\s3\progavancée2\tp1\tp1\canon.cpp(53): warning C4309: 'argument' : troncation de valeur de constante
      1>f:\s3\progavancée2\tp1\tp1\canon.cpp(71): warning C4305: 'argument' : troncation de 'unsigned int' à 'unsigned char'
      1>f:\s3\progavancée2\tp1\tp1\canon.cpp(71): warning C4309: 'argument' : troncation de valeur de constante
-         Background.cpp
-         c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
-     1>f:\s3\progavancée2\engine\src\core\sprite.h(20): warning C4244: 'argument' : conversion de 'LONG' en 'FLOAT', perte possible de données
-     1>f:\s3\progavancée2\engine\src\core\sprite.h(25): warning C4244: '=' : conversion de 'float' en 'LONG', perte possible de données
-     1>f:\s3\progavancée2\engine\src\core\sprite.h(27): warning C4244: '=' : conversion de 'float' en 'LONG', perte possible de données
-     1>f:\s3\progavancée2\engine\src\core\sprite.h(28): warning C4244: '=' : conversion de 'float' en 'LONG', perte possible de données
-     1>f:\s3\progavancée2\tp1\tp1\background.cpp(7): warning C4244: 'argument' : conversion de 'UINT' en 'FLOAT', perte possible de données
          Génération de code en cours...
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\S3\ProgAvancée2\TP1\Debug\TP1.exe" /INCREMENTAL /NOLOGO d3d9.lib d3dx9.lib dxerr.lib dxguid.lib dinput8.lib irrklang.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\S3\ProgAvancée2\TP1\Debug\TP1.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\S3\ProgAvancée2\TP1\Debug\TP1.lib" /MACHINE:X86 Debug\Background.obj
-         Debug\Bomb.obj
-         Debug\Bumper.obj
-         Debug\Canon.obj
-         Debug\Collidables.obj
-         Debug\LostScreen.obj
-         Debug\Main.obj
-         Debug\Navi.obj
-         Debug\Peggle.obj
-         Debug\Pot.obj
-         Debug\SplashScreen.obj
-         "F:\S3\ProgAvancée2\TP1\Debug\App.lib"
-         "F:\S3\ProgAvancée2\TP1\Debug\Core.lib"
-         TP1.vcxproj -> F:\S3\ProgAvancée2\TP1\Debug\TP1.exe
-     1>Génération du projet "F:\S3\ProgAvancée2\TP1\TP1\TP1.vcxproj" terminée (Build cible(s)).
+     1>Génération du projet "F:\S3\ProgAvancée2\TP1\TP1\TP1.vcxproj" terminée (Build cible(s)) -- ÉCHEC.
 
-La génération a réussi.
+ÉCHEC de la build.
 
-Temps écoulé 00:00:11.60
+Temps écoulé 00:00:03.26
