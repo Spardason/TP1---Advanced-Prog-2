@@ -9,7 +9,7 @@ Navi::Navi()
 	, LEFT_BORDER(0)
 	, BOTTOM_BORDER(0)
 	, mRotation(0)
-	, mDir(0.f, 0.f, 0.f)
+	, mDir(0.f, 0.f)
 	, mCenter(0.f, 0.f, 0.f)
 {
 	
@@ -23,7 +23,7 @@ Navi::Navi(D3DXVECTOR2 basePos)
 	, LEFT_BORDER(gApp->GetParam().BackBufferWidth / 2)
 	, BOTTOM_BORDER(-(gApp->GetParam().BackBufferHeight / 2))
 	, mRotation(0)
-	, mDir(0.f, 0.f, 0.f)
+	, mDir(0.f, 0.f)
 	, mCenter(GetTextureInfos()->infos.Width / 2, GetTextureInfos()->infos.Height / 2, 0.f)
 {
 	collider = new CCircle(this, 0.f, 0.f, RADIUS);
@@ -40,7 +40,7 @@ Navi::~Navi()
 
 void Navi::Activate(D3DXVECTOR3 pos)
 {
-	mDir = -D3DXVECTOR3(-sinf(mRotation), cosf(mRotation), 0.f);
+	mDir = -D3DXVECTOR2(-sinf(mRotation), cosf(mRotation));
 	SetPosition(pos.x, pos.y);
 	SetVisible(true);
 }
@@ -54,17 +54,15 @@ void Navi::Update()
 {
 	float dt = gTimer->GetDeltaTime();
 
-	CheckBorder();
 
 	if (isVisible)
 	{
+		CheckCollision();
+		CheckBorder();
 		Move(dt);
-
-		if (CheckCollision())
-		{
-
-		}
 	}
+
+	mDir.y -= 0.981 * dt;
 
 	
 }
@@ -73,9 +71,8 @@ void Navi::Move(float dt)
 {	
 	static float timer = 0;
 
-	D3DXVECTOR3 tempPos = GetPosition();
+	D3DXVECTOR2 tempPos = GetPosition();
 
-	//mPos += mDir * SPEED * dt;
 	tempPos += mDir * SPEED * dt;
 
 	collider->SetPosition(tempPos.x, tempPos.y);
@@ -90,13 +87,14 @@ void Navi::Move(float dt)
 	//}
 }
 
-bool Navi::CheckCollision()
+void Navi::CheckCollision()
 {
-	bool isColliding = false;
 	//Go through each collider collided with though the LookForCollision Function
 	for each (Collider* col in collider->LookForCollisions())
 	{
-		isColliding = true;
+		mDir = D3DXVECTOR2(GetPosition().x, GetPosition().y) - col->GetPosition();
+		D3DXVec2Normalize(&mDir, &mDir);
+
 		//If one of the collider is a bomb
 		if (col->GetGameObject()->GetID() == Components::Bomb)
 		{
@@ -109,8 +107,6 @@ bool Navi::CheckCollision()
 			static_cast<Bumper*>(col->GetGameObject())->OnCollision();
 		}
 	}
-
-	return isColliding;
 }
 
 void  Navi::CheckBorder()

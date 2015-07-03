@@ -14,4 +14,6 @@ Collidables::Collidables(Texture::ID id)
 
 Collidables::~Collidables()
 {
+	delete collider;
+	collider = nullptr;
 }

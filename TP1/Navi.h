@@ -29,13 +29,13 @@ public:
 
 private:
 	void Move(float dt);
-	bool CheckCollision();
+	void CheckCollision();
 	void CheckBorder();
 
 	CCircle *collider;
 
 	D3DXVECTOR3 mCenter;
-	D3DXVECTOR3 mDir;
+	D3DXVECTOR2 mDir;
 
 	float mRotation;
 
