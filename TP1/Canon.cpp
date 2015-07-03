@@ -70,12 +70,13 @@ void Canon::Shoot(float dt)
 
 	if (gDInput->keyDown(DIKEYBOARD_SPACE) && mShotTimer >= SHOT_SPEED && !mBullet->IsVisible())
 	{
-		D3DXVECTOR2 dir(-sinf(mRotation), cosf(mRotation));
-		D3DXVECTOR2 pos(GetPosition());
+		D3DXVECTOR3 dir(-sinf(mRotation), cosf(mRotation), 0.f);
+		D3DXVECTOR3 pos(dir * GetTextureInfos()->infos.Height);
+		D3DXVECTOR3 newPos(GetPosition() - pos);
 
 		mShotTimer = 0;
 		mBullet->SetRotation(mRotation);
-		mBullet->Activate(pos);
+		mBullet->Activate(newPos);
 		std::cout << "PEW!" << std::endl;
 	}
 }

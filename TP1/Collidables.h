@@ -16,12 +16,11 @@ public:
 	Collidables(Texture::ID id);
 	~Collidables();
 
-	virtual bool OnCollision() { return true; }
+	virtual void OnCollision() {}
 	virtual void Start() {}
 	virtual void Update() {}
 	virtual void Stop() {}	
 
-private:
 	CCircle *collider;
 };
 

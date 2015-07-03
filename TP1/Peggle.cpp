@@ -92,8 +92,8 @@ void Peggle::CollidablesPlacement(int nbInRow)
 		float x = (index % nbInRow);
 		float y = (index / nbInRow);
 
-		std::cout << "X: " << x << " Y: " << y << std::endl;
-		(*it)->SetPosition(basePos + x * 60, y * 60 );
+		(*it)->SetPosition(basePos + x * 60, y * 60);
+		(*it)->collider->SetPosition(basePos + x * 60, y * 60);
 
 		index++;
 	}

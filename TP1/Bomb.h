@@ -13,12 +13,14 @@ public:
 	Bomb();
 	~Bomb();
 
-	bool OnCollision() { return true; }
+	void OnCollision();
 	void Start() {}
 	void Update() {}
 	void Stop() {}
 
 private:
 	D3DXVECTOR3 mCenter;
+
+	const int RADIUS;
 };
 

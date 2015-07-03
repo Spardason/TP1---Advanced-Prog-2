@@ -1,6 +1,8 @@
 #pragma once
 #include "Sprite.h"
 #include "Resources.h"
+#include "Bomb.h"
+#include "Bumper.h"
 #include "CCircle.h"
 
 /*
@@ -22,11 +24,13 @@ public:
 
 	void SetRotation(float rot){ mRotation = rot; }
 
-	void Activate(D3DXVECTOR2 pos);
+	void Activate(D3DXVECTOR3 pos);
 	void Deactivate();
 
 private:
 	void Move(float dt);
+	bool CheckCollision();
+	void CheckBorder();
 
 	CCircle *collider;
 
@@ -34,6 +38,12 @@ private:
 	D3DXVECTOR3 mDir;
 
 	float mRotation;
+
+	const int RIGHT_BORDER;
+	const int LEFT_BORDER;
+	const int BOTTOM_BORDER;
+
+	const int RADIUS;
 	const int SPEED;
 };
 
