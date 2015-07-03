@@ -35,7 +35,7 @@ private:
 	CCircle *collider;
 
 	D3DXVECTOR3 mCenter;
-	D3DXVECTOR3 mDir;
+	D3DXVECTOR2 mDir;
 
 	float mRotation;
 
