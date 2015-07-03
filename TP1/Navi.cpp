@@ -62,7 +62,7 @@ void Navi::Update()
 		Move(dt);
 	}
 
-	mDir.y -= 0.981 * dt;
+	mDir.y -= 2 * dt;
 
 	
 }
@@ -99,6 +99,7 @@ void Navi::CheckCollision()
 		if (col->GetGameObject()->GetID() == Components::Bomb)
 		{
 			//Consider that collider's component a bomb
+			col->SetEnabled(false);
 			static_cast<Bomb*>(col->GetGameObject())->OnCollision();
 		}
 

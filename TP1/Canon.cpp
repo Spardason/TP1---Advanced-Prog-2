@@ -77,6 +77,5 @@ void Canon::Shoot(float dt)
 		mShotTimer = 0;
 		mBullet->SetRotation(mRotation);
 		mBullet->Activate(newPos);
-		std::cout << "PEW!" << std::endl;
 	}
 }
