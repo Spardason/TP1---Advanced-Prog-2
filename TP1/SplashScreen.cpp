@@ -4,7 +4,6 @@
 SplashScreen::SplashScreen()
 	: Sprite(Texture::ID::SplashScreen)
 	, mCenter(GetTextureInfos()->infos.Width / 2, GetTextureInfos()->infos.Height / 2, 0.f)
-	//, mPos(0.f, 0.f, 0.f)
 {
 	SetPivot(mCenter);
 	SetPosition(0.f, 0.f);

@@ -13,7 +13,12 @@ namespace Texture
 		Bumper,
 		Pot,
 		SplashScreen,
-		LostScreen
+		LostScreen,
+		BallsText,
+		ZeroText,
+		OneText,
+		TwoText,
+		ThreeText
 	};
 }
 
@@ -23,7 +28,8 @@ namespace Components
 	{
 		Bomb, 
 		Bumper, 
-		Ball
+		Ball,
+		Pot
 	};
 }
 

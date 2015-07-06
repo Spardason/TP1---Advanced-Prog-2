@@ -8,13 +8,17 @@ Bomb::Bomb()
 {
 	SetPivot(mCenter);
 	SetID(Components::ID::Bomb);
+	collider = new CCircle(this, GetPosition().x, GetPosition().y, GetTextureInfos()->infos.Width / 2);
 }
 
 
 Bomb::~Bomb()
 {
+	delete collider;
+	collider = nullptr;
 }
 
+// Set the bomb invisible when the ball collides with it
 void Bomb::OnCollision() 
 {
 	if (IsVisible())

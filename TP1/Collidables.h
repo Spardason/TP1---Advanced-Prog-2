@@ -12,15 +12,18 @@ class Collidables :
 	public Sprite
 {
 public:
+	// Ctor/Dtor
 	Collidables();
 	Collidables(Texture::ID id);
 	~Collidables();
 
+	// Parent Methods
 	virtual void OnCollision() {}
 	virtual void Start() {}
 	virtual void Update() {}
 	virtual void Stop() {}	
 
+	// Public Variables
 	CCircle *collider;
 };
 

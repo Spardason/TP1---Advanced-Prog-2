@@ -23,6 +23,7 @@
     <ClInclude Include="Pot.h" />
     <ClInclude Include="Resources.h" />
     <ClInclude Include="SplashScreen.h" />
+    <ClInclude Include="Text.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Background.cpp" />
@@ -36,6 +37,7 @@
     <ClCompile Include="Peggle.cpp" />
     <ClCompile Include="Pot.cpp" />
     <ClCompile Include="SplashScreen.cpp" />
+    <ClCompile Include="Text.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Engine\src\App\App.vcxproj">

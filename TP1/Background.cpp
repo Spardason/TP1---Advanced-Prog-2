@@ -1,6 +1,5 @@
 #include "Background.h"
 
-
 Background::Background()
 	: Sprite(Texture::ID::Bg)
 	, mCenter(GetTextureInfos()->infos.Width/2, GetTextureInfos()->infos.Height/2, 0.f)

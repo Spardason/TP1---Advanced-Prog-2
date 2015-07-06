@@ -8,14 +8,17 @@ Bumper::Bumper()
 {
 	SetPivot(mCenter);
 	SetID(Components::ID::Bumper);
-	collider = new CCircle(this, GetPosition().x, GetPosition().y, GetTextureInfos()->infos.Width);
+	collider = new CCircle(this, GetPosition().x, GetPosition().y, GetTextureInfos()->infos.Width / 2);
 }
 
 
 Bumper::~Bumper()
 {
+	delete collider;
+	collider = nullptr;
 }
 
+// Does nothing special when colliding
 void Bumper::OnCollision()
 {
 
